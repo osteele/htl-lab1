@@ -26,7 +26,6 @@ def home_page():
 @app.route('/area/<course_area>')
 def area_page(course_area):
     return render_template('course_area.html', courses=courses[courses.course_area == course_area].iterrows())
-    return render_template('course_area.html', course_table=courses[courses.course_area == course_area].to_html())
 
 if __name__ == '__main__':
     app.run(debug=True)

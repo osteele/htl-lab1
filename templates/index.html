@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Olin Course Catalog</title>
+    <style type="text/css">
+      td, th { border: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <h2>Areas</h2>
+    {% for area in areas | sort %}
+      <ul>
+        <li><a href="/area/{{area}}">{{area}}</a></li>
+      </ul>
+    {% endfor %}
+
+    <h2>Contacts</h2>
+    {% for contact in contacts | sort %}
+      {{contact}}
+    {% endfor %}
+  </body>
+</html>

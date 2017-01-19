@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Olin Course Catalog</title>
+    <style type="text/css">
+      td, th { border: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <dl>
+      {% for index, course in courses %}
+        <dt>{{ course.course_number }}: {{ course.course_name }} ({{ course.course_contact }})</dt>
+        <dd>{{ course.course_description }}</dd>
+      {% endfor %}
+    </dl>
+  </body>
+</html>

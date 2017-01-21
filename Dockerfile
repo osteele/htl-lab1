@@ -1,6 +1,6 @@
 # Set the base image.
 # Use Ubuntu for compatibility with student build environments.
-FROM ubuntu
+FROM ubuntu:16.10
 MAINTAINER Oliver Steele
 
 # Usage:
@@ -15,8 +15,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Install necessary packages
 RUN apt-get update
-RUN apt-get -y upgrade
-RUN apt-get -y install python3-pip python3-dev build-essential
+RUN apt-get -y install python3 python3-pip python3-dev build-essential
 RUN apt-get -y install curl  # for debugging
 RUN apt-get -y install python3-numpy
 RUN apt-get -y install python3-pandas

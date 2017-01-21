@@ -1,0 +1,12 @@
+version: "2.1"
+
+services:
+  flask:
+    build:
+      context: .
+    image: htl-lab1
+    container_name: htl-lab1
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app

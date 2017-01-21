@@ -24,6 +24,24 @@ $ pip3 install pandas
 2. Browse to <http://127.0.0.1:5000/>. (Running `server.py` also prints this URL.)
 
 
+## Alternative setup and Usage
+
+If you're having trouble installing Python, Flask, or Pandas on your development
+machine, use the following instead.
+
+The second step takes a long time the first time you run it, but is
+much faster after that.
+
+1. Install [Docker](https://www.docker.com/products/docker/).
+This works on macOS, Windows, and Ubuntu (as well as [many other Linux
+distributions](https://docs.docker.com/engine/installation/linux/)).
+This is only necessary once.
+
+2. Run `docker-compose up` in the command line
+
+3. Browse to <http://127.0.0.1:5000/>
+
+
 ## Directory Structure
 
 `server.py` is a web application, written using the Flask web framework.

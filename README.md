@@ -3,6 +3,8 @@
 This is a [Flask](http://flask.pocoo.org) server that implements a minimal web-based interface to the Olin College
 2016-2017 course catalog. The course data is scraped from the <olin.edu> web site.
 
+![](./docs/screenshot.png)
+
 
 ## Requirements
 

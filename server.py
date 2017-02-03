@@ -14,6 +14,10 @@ from flask import Flask, redirect, render_template, request, url_for
 DEBUG = os.environ.get('ENVIRONMENT', 'dev') == 'dev'
 
 app = Flask(__name__)
+# app.config.from_yaml(os.join(app.root_path, 'config.yml'))
+
+ENVIRONMENT = os.environ.get('ENVIRONMENT', 'development')
+app.config.from_pyfile(os.path.join('config', ENVIRONMENT + '.py'))
 
 courses = pd.read_csv('./data/olin-courses-16-17.csv')
 
@@ -31,4 +35,4 @@ def area_page(course_area):
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', debug=True, port=port)
+    app.run(host=app.config['HOST'], port=port)
